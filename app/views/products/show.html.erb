@@ -7,8 +7,8 @@ $(function () {
     var nextId = parseInt($(".js-next").attr("data-id")) + 1;
     $.getJSON("/products/" + nextId + "/data", function(data) {
       $(".productName").text(data["name"]);
-      $(".productPrice").text(data["price"]);
-      $(".productInventory").text(data["inventory"]);
+      // $(".productPrice").text(data["price"]);
+      // $(".productInventory").text(data["inventory"]);
       $(".productDescription").text(data["description"]);
       $(".js-next").attr("data-id", data["id"]);
     });
